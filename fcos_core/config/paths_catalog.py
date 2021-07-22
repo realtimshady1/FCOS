@@ -7,6 +7,18 @@ import os
 class DatasetCatalog(object):
     DATA_DIR = "datasets"
     DATASETS = {
+        "sar_train_coco_style": {
+            "img_dir": "/home/ubuntu/data/train",
+            "ann_file": "/home/ubuntu/data/sar_train.json"
+        },
+        "sar_test_coco_style": {
+            "img_dir": "/home/ubuntu/data/test",
+            "ann_file": "/home/ubuntu/data/sar_test.json"
+        },
+        "sar_validate_coco_style": {
+            "img_dir": "/home/ubuntu/data/validate",
+            "ann_file": "/home/ubuntu/data/sar_validate.json"
+        },
         "coco_2017_train": {
             "img_dir": "coco/train2017",
             "ann_file": "coco/annotations/instances_train2017.json"

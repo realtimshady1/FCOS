@@ -337,8 +337,8 @@ class PolygonList(object):
             if len(polygons) == 0:
                 polygons = [[[]]]
             if isinstance(polygons[0], (list, tuple)):
-                assert isinstance(polygons[0][0], (list, tuple)), str(
-                    type(polygons[0][0])
+                assert isinstance(polygons[0], (list, tuple)), str(
+                    type(polygons[0])
                 )
             else:
                 assert isinstance(polygons[0], PolygonInstance), str(type(polygons[0]))
@@ -419,8 +419,8 @@ class PolygonList(object):
                 item = item.nonzero()
                 item = item.squeeze(1) if item.numel() > 0 else item
                 item = item.tolist()
-            for i in item:
-                selected_polygons.append(self.polygons[i])
+#            for i in item:
+ #               selected_polygons.append(self.polygons[i])
         return PolygonList(selected_polygons, size=self.size)
 
     def __iter__(self):
